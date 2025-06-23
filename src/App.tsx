@@ -1,4 +1,4 @@
-import { AppProvider} from './context/AppContext';
+import { AppProvider } from './context/AppContext';
 import { AppContent } from './AppContent';
 
 function App() {

@@ -46,18 +46,21 @@ export function AddPageButton({ index }: AddPageButtonProps) {
       `}
     >
       {draggedPageId !== null && hoveringOverSeparatorIndex === index && (
-        <div id='highlight' className="absolute inset-0 bg-blue-100 z-20 rounded-lg"></div>
+        <div id="highlight" className="absolute inset-0 bg-blue-100 z-20 rounded-lg"></div>
       )}
       <div
-        id='page-separator'
+        id="page-separator"
         className={`
           flex items-center justify-center w-full relative z-30 transition-opacity duration-300 ease-in-out
           ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
         `}
       >
-        <div className="w-[20px] border-b border-dashed" style={{ height: '1.5px', borderWidth: '1px', borderColor: 'rgba(192, 192, 192, 1)' }}></div>
+        <div
+          className="w-[20px] border-b border-dashed"
+          style={{ height: '1.5px', borderWidth: '1px', borderColor: 'rgba(192, 192, 192, 1)' }}
+        ></div>
         <button
-          id='add-page-button'
+          id="add-page-button"
           className={`
             w-4 h-4 rounded-full bg-white flex items-center justify-center shrink-0
             transition-transform duration-300 ease-in-out /* For smooth spin */
@@ -72,19 +75,31 @@ export function AddPageButton({ index }: AddPageButtonProps) {
             boxShadow: buttonGlowStates[index] ? '0 0 12px 6px rgba(47, 114, 226, 0.7)' : 'none',
           }}
         >
-          <svg id='plus-icon' className="w-4 h-4 stroke-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+          <svg
+            id="plus-icon"
+            className="w-4 h-4 stroke-black"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+          </svg>
         </button>
-        <div className="w-[20px] border-b border-dashed" style={{ height: '1.5px', borderWidth: '1px', borderColor: 'rgba(192, 192, 192, 1)' }}></div>
+        <div
+          className="w-[20px] border-b border-dashed"
+          style={{ height: '1.5px', borderWidth: '1px', borderColor: 'rgba(192, 192, 192, 1)' }}
+        ></div>
       </div>
       <div
-        id='button-not-visible-separator'
+        id="button-not-visible-separator"
         className={`w-full border-b border-dashed absolute inset-y-1/2 transition-opacity duration-300 ease-in-out`}
         style={{
           height: '1.5px',
           borderWidth: '1px',
           borderColor: 'rgba(192, 192, 192, 1)',
           zIndex: 1,
-          opacity: (!isVisible && !isFirstSeparator) ? '1' : '0'
+          opacity: !isVisible && !isFirstSeparator ? '1' : '0',
         }}
       ></div>
     </div>

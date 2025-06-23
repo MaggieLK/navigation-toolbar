@@ -24,8 +24,8 @@ export function BackgroundAnimation() {
       generatedStars.push({
         top: Math.floor(Math.random() * 100),
         left: Math.floor(Math.random() * 100),
-        duration: ((Math.floor(Math.random() * 20) + 20) / 10),
-        delay: (Math.floor(Math.random() * 20) / -10),
+        duration: (Math.floor(Math.random() * 20) + 20) / 10,
+        delay: Math.floor(Math.random() * 20) / -10,
       });
     }
     setStars(generatedStars);
@@ -37,8 +37,8 @@ export function BackgroundAnimation() {
       generatedShootingStars.push({
         startY: startY,
         endY: endY,
-        duration: (Math.floor(Math.random() * 5) + 5),
-        delay: (Math.floor(Math.random() * 500) / 10),
+        duration: Math.floor(Math.random() * 5) + 5,
+        delay: Math.floor(Math.random() * 500) / 10,
       });
     }
     setShootingStars(generatedShootingStars);
@@ -116,11 +116,13 @@ export function BackgroundAnimation() {
           <div
             key={i}
             className="shooting-star"
-            style={{
-              '--start-y-vh': `${ss.startY}vh`,
-              '--end-y-vh': `${ss.endY}vh`,
-              animation: `shooting-star ${ss.duration}s ${ss.delay}s infinite backwards`,
-            } as React.CSSProperties}
+            style={
+              {
+                '--start-y-vh': `${ss.startY}vh`,
+                '--end-y-vh': `${ss.endY}vh`,
+                animation: `shooting-star ${ss.duration}s ${ss.delay}s infinite backwards`,
+              } as React.CSSProperties
+            }
           ></div>
         ))}
       </div>

@@ -1,7 +1,9 @@
 # Page Navigation Toolbar
+
 This is a dynamic and interactive page navigation toolbar built with React and Tailwind CSS. It allows users to easily navigate, add, rename, duplicate, reorder, and delete pages within a sleek, responsive interface. The application features an animated background (from my 100 days of CSS project https://codepen.io/collection/DxNzrp?cursor=eyJwYWdlIjoxfQ==) and a context menu for advanced page management.
 
 ## Features
+
 Page Navigation: Click on any page to make it active.s
 
 Drag & Drop Reordering: Reorder pages intuitively by dragging and dropping them. Pages can be dropped onto other pages or into the separators between them.
@@ -27,6 +29,7 @@ Animated Background: A subtle twinkling and shooting star animation in the backg
 Modern UI/UX: Utilizes Tailwind CSS for a clean, modern look, with smooth transitions and animations.
 
 ## Components Overview
+
 The application is structured into several React components and a central context for state management:
 
 App: The main entry point that wraps the entire application with the AppProvider.
@@ -44,6 +47,7 @@ AddPageButton (src/components/AddPageButton.tsx): Renders the interactive separa
 ContextMenu (src/components/ContextMenu.tsx): Displays the right-click context menu, handling its positioning to ensure it stays within the viewport and offers various page actions.
 
 ## How to Use
+
 Navigate Pages: Click on any page button to make it the active page.
 
 Open the Menu: Right-click on a page or click the three vertical dots icon that appears when a page is active.
@@ -61,11 +65,13 @@ Delete a Page: From the menu, select "Delete". The page will be removed from the
 Set as first page: From the menu, select "Set as first page". The selected page will move to the very beginning of the toolbar.
 
 ## Styling
+
 Tailwind CSS: Used extensively for utility-first styling, enabling rapid UI development and ensuring responsiveness.
 
 Custom CSS Animations: flickr for twinkling stars, shooting-star for moving stars, pop for dropped page animation, and unfold-menu for context menu appearance.
 
 ## Development Notes
+
 Context API: React Context is used for global state management, allowing components to access shared data without prop drilling.
 
 useLayoutEffect: Employed in the ContextMenu component to precisely position the menu after DOM mutations but before painting, preventing layout shifts and ensuring correct placement relative to the target element.
