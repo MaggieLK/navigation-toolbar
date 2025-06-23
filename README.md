@@ -1,6 +1,11 @@
 # Page Navigation Toolbar
 
+Deployed here: https://navigation-toolbar.vercel.app/
+
 This is a dynamic and interactive page navigation toolbar built with React and Tailwind CSS. It allows users to easily navigate, add, rename, duplicate, reorder, and delete pages within a sleek, responsive interface. The application features an animated background (from my 100 days of CSS project https://codepen.io/collection/DxNzrp?cursor=eyJwYWdlIjoxfQ==) and a context menu for advanced page management.
+
+![Screenshot 2025-06-22 at 11 29 29 PM](https://github.com/user-attachments/assets/669eabf8-cc3c-4b49-a342-fa04cda96e3c)
+
 
 ## Features
 
